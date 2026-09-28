@@ -17,11 +17,15 @@
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="#home">
+    <a class="brand" href="#home" aria-label="মাদ্রাসার হোম পেজ">
       <img src="assets/logo.jpg" alt="মাদ্রাসার লোগো">
-      <span>হালিমা সাদিয়া (রা.)</span>
+      <span class="brand-text">
+        <b class="brand-bn">হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</b>
+        <span class="brand-ar" lang="ar" dir="rtl">مدرسة حليمة سعدية (رضي الله عنها) للبنات ورياض الأطفال النورانية</span>
+        <span class="brand-en" lang="en">Halima Sadia (RA) Women's Madrasa &amp; Nurani Kindergarten</span>
+      </span>
     </a>
-    <button class="menu" aria-label="মেনু">☰</button>
+    <button class="menu" aria-label="মেনু" aria-expanded="false">☰</button>
     <div class="links">
       <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a>
       <a href="#programs">বিভাগসমূহ</a><a href="#admission">ভর্তি</a>
@@ -107,6 +111,15 @@
 </main>
 
 <footer><div class="container">© <span id="year"></span> হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const menuBtn=document.querySelector('.menu');
+  const links=document.querySelector('.links');
+  menuBtn.addEventListener('click',()=>{
+    const open=links.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
 </body>
 </html>
