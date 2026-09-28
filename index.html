@@ -17,15 +17,15 @@
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="#home" aria-label="মাদ্রাসার হোম পেজ">
-      <img src="assets/logo.jpg" alt="হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসার লোগো">
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="হালিমা সাদিয়া মাদ্রাসার লোগো">
       <span class="brand-text">
         <b class="brand-bn">হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</b>
-        <span class="brand-ar" lang="ar" dir="rtl">مدرسة حليمة سعدية رضي الله عنها للبنات ورياض الأطفال النورانية</span>
+        <span class="brand-ar" lang="ar" dir="rtl">مدرسة حليمة سعدية (رض) للبنات وروضة الأطفال النورانية</span>
         <span class="brand-en" lang="en">Halima Sadia (RA) Women's Madrasa &amp; Nurani Kindergarten</span>
       </span>
     </a>
-    <button class="menu" aria-label="মেনু" aria-expanded="false">☰</button>
+    <button class="menu" aria-label="মেনু">☰</button>
     <div class="links">
       <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a>
       <a href="#programs">বিভাগসমূহ</a><a href="#admission">ভর্তি</a>
@@ -34,6 +34,10 @@
     </div>
   </div>
 </nav>
+
+<section class="header-design" aria-label="মাদ্রাসার পরিচিতি ব্যানার">
+  <img src="image1.png" alt="হালিমা সাদিয়া মাদ্রাসার ডিজাইন ব্যানার">
+</section>
 
 <main id="home">
 <section class="hero">
@@ -48,7 +52,7 @@
       </div>
     </div>
     <div class="hero-card">
-      <img src="assets/logo.jpg" alt="লোগো">
+      <img src="logo.jpg" alt="মাদ্রাসার লোগো">
       <div><b>২০১৬ খ্রিস্টাব্দে প্রতিষ্ঠিত</b><br>খরনা, পটিয়া, চট্টগ্রাম</div>
     </div>
   </div>
@@ -95,7 +99,11 @@
 <section class="section" id="gallery">
   <div class="container">
     <div class="section-head"><span>ছবির সংগ্রহ</span><h2>গ্যালারি</h2></div>
-    <div class="gallery"><div>ছবি ১</div><div>ছবি ২</div><div>ছবি ৩</div></div>
+    <div class="gallery">
+      <figure><img src="image1.png" alt="মাদ্রাসার ব্যানার ডিজাইন"><figcaption>ছবি ১ — Header Design</figcaption></figure>
+      <figure><img src="logo.jpg" alt="মাদ্রাসার লোগো"><figcaption>ছবি ২ — লোগো</figcaption></figure>
+      <figure><div class="gallery-placeholder">ছবি ৩</div><figcaption>পরবর্তীতে নতুন ছবি যোগ করা যাবে</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -111,15 +119,6 @@
 </main>
 
 <footer><div class="container">© <span id="year"></span> হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</div></footer>
-<script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const menuBtn=document.querySelector('.menu');
-  const links=document.querySelector('.links');
-  menuBtn.addEventListener('click',()=>{
-    const open=links.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded',open?'true':'false');
-  });
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-</script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 - `result.html` — অনলাইন ফলাফল পেজ
 - `admin.html` — অ্যাডমিন প্যানেলের প্রাথমিক কাঠামো
 - `style.css` — ডিজাইন
-- `assets/logo.jpg` — দেওয়া লোগো
+- `logo.jpg` — দেওয়া লোগো
 - `supabase/schema.sql` — ফলাফল/নোটিশের ডাটাবেস কাঠামো
 
 ## পরবর্তী ধাপ
@@ -23,3 +23,11 @@
 10. চূড়ান্ত পরীক্ষা ও প্রকাশ
 
 নিরাপত্তার জন্য Supabase service-role key কখনো frontend-এ রাখা যাবে না।
+
+
+### ছবি ব্যবহারের নিয়ম
+- `logo.jpg` = মাদ্রাসার লোগো
+- `image1.png` = নতুন Header Design / ব্যানার
+- নতুন ছবি যোগ করতে একইভাবে `image2.jpg`, `image3.jpg` ইত্যাদি নামে ফাইল আপলোড করে HTML-এ `<img src="image2.jpg" alt="...">` ব্যবহার করা যাবে।
+
+**গুরুত্বপূর্ণ:** `logo.jpg` এবং `image1.png` এই সংস্করণে মূল repository folder-এ রাখা হয়েছে।
