@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ফলাফল | হালিমা সাদিয়া (রা.)</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><img src="assets/logo.jpg" alt="লোগো"><span>হালিমা সাদিয়া (রা.)</span></a><a class="back" href="index.html">← হোম</a></div></nav>
+<main class="result-page">
+  <div class="container narrow">
+    <div class="section-head center"><span>অনলাইন ফলাফল</span><h1>শিক্ষার্থীর ফলাফল</h1></div>
+    <div class="result-search card">
+      <label>রোল নম্বর</label>
+      <input id="roll" type="text" placeholder="যেমন: 1001">
+      <label>পরীক্ষা</label>
+      <select id="exam"><option value="">পরীক্ষা নির্বাচন করুন</option><option>১ম সাময়িক</option><option>অর্ধবার্ষিক</option><option>বার্ষিক</option></select>
+      <button class="btn" onclick="findResult()">ফলাফল দেখুন</button>
+      <p id="msg" class="msg"></p>
+    </div>
+    <div id="result" class="card result-card hidden"></div>
+    <div class="note">ডেমো পর্যায়ে এই পেজটি প্রস্তুত করা হয়েছে। Supabase সংযোগ ও প্রকৃত শিক্ষার্থীর ডেটা যোগ করার পর এখানে লাইভ ফলাফল দেখাবে।</div>
+  </div>
+</main>
+<script>
+function findResult(){
+  const roll=document.getElementById('roll').value.trim(), exam=document.getElementById('exam').value;
+  const msg=document.getElementById('msg'), box=document.getElementById('result');
+  if(!roll || !exam){ msg.textContent='রোল নম্বর ও পরীক্ষা নির্বাচন করুন।'; return; }
+  msg.textContent='ডেমো মোড: Supabase সংযোগের পর প্রকৃত ফলাফল এখানে আসবে।';
+  box.classList.add('hidden');
+}
+</script>
+</body></html>
