@@ -8,44 +8,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <div class="container topbar">
-    <span>📍 খরনা, ৫ নং ওয়ার্ড, পটিয়া, চট্টগ্রাম</span>
-    <a href="tel:01747885640">📞 01747885640</a>
-  </div>
-</header>
 
-<section class="top-header-banner">
-  <div class="container text-center">
-    <h1 class="banner-title-bn">হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</h1>
-    <div class="banner-title-ar" lang="ar" dir="rtl">مَدْرَسَةُ حَلِيمَةَ سَعْدِيَةَ (رَضِ) لِلْبَنَاتِ وَرَوْضَةُ الْأَطْفَالِ النُّورَانِيَّةِ</div>
-    <div class="banner-title-en" lang="en">Halima Sadia (RA) Women's Madrasa &amp; Nurani Kindergarten</div>
-  </div>
-</section>
-
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#home">
-      <img src="logo.jpg" alt="হালিমা সাদিয়া মাদ্রাসার লোগো">
-      <span class="brand-text">
-        <b class="brand-bn">হালিমা সাদিয়া (রা.)</b>
-      </span>
-    </a>
-    <button class="menu" aria-label="মেনু">☰</button>
-    <div class="links">
-      <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a>
-      <a href="#programs">বিভাগসমূহ</a><a href="#admission">ভর্তি</a>
-      <a href="result.html" class="result-link">📊 ফলাফল</a>
-      <a href="#notice">নোটিশ</a><a href="#gallery">গ্যালারি</a><a href="#contact">যোগাযোগ</a>
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 খরনা, ৫ নং ওয়ার্ড, পটিয়া, চট্টগ্রাম</span>
+      <a href="tel:01747885640">📞 01747885640</a>
     </div>
   </div>
-</nav>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="mini-brand" href="#home">
+        <img src="assets/logo.jpg" alt="মাদ্রাসার লোগো">
+        <span>হালিমা সাদিয়া (রা.)</span>
+      </a>
+      <button class="menu" aria-label="মেনু" onclick="document.querySelector('.links').classList.toggle('show')">☰</button>
+      <div class="links">
+        <a href="#home">হোম</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#programs">বিভাগসমূহ</a>
+        <a href="#admission">ভর্তি</a>
+        <a href="result.html" class="result-link">📊 ফলাফল</a>
+        <a href="#notice">নোটিশ</a>
+        <a href="#gallery">গ্যালারি</a>
+        <a href="#contact">যোগাযোগ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- নতুন ডিজাইনের ব্যানার -->
+  <div class="brand-banner">
+    <img src="assets/image1.png" alt="হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন">
+  </div>
+</header>
 
 <main id="home">
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+      <span class="eyebrow">بسم الله الرحمن الرحيم</span>
       <h1>দ্বীনি ও আধুনিক শিক্ষায়<br><strong>আদর্শ প্রজন্ম গড়ার প্রত্যয়</strong></h1>
       <p>হালিমা সাদিয়া (রা.) মহিলা মাদ্রাসা ও নূরানী কিন্ডারগার্টেন</p>
       <div class="actions">
@@ -54,8 +56,8 @@
       </div>
     </div>
     <div class="hero-card">
-      <img src="logo.jpg" alt="মাদ্রাসার লোগো">
-      <div><b>২০১৬ খ্রিস্টাব্দে প্রতিষ্ঠিত</b><br>খরনা, পটিয়া, চট্টগ্রাম</div>
+      <img src="assets/logo.jpg" alt="হালিমা সাদিয়া মাদ্রাসার লোগো">
+      <div><b>২০১৬ খ্রিস্টাব্দে প্রতিষ্ঠিত</b><br>খরনা, ৫ নং ওয়ার্ড, পটিয়া, চট্টগ্রাম</div>
     </div>
   </div>
 </section>
@@ -102,9 +104,9 @@
   <div class="container">
     <div class="section-head"><span>ছবির সংগ্রহ</span><h2>গ্যালারি</h2></div>
     <div class="gallery">
-      <figure><img src="logo.jpg" alt="মাদ্রাসার লোগো"><figcaption>ছবি ১ — লোগো</figcaption></figure>
-      <figure><div class="gallery-placeholder">ছবি ২</div><figcaption>পরবর্তীতে নতুন ছবি যোগ করা যাবে</figcaption></figure>
-      <figure><div class="gallery-placeholder">ছবি ৩</div><figcaption>পরবর্তীতে নতুন ছবি যোগ করা যাবে</figcaption></figure>
+      <div class="gallery-item"><img src="assets/image1.png" alt="প্রতিষ্ঠানের ব্যানার"></div>
+      <div class="gallery-item"><img src="assets/logo.jpg" alt="প্রতিষ্ঠানের লোগো"></div>
+      <div class="gallery-placeholder">আরও ছবি পরে যোগ করা হবে</div>
     </div>
   </div>
 </section>
